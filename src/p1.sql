@@ -15,8 +15,8 @@ create table sales {
   sale_date DATE,
   primary key (order_id),
   foreign key (order_id) references inventories(order_id),
-  foreign key (customer_id) references customers(customer_id),
-  foreign key (product_id) references inventories(product_id)
+  foreign key (customer_id) references customers(customer_id) on delete cascade,
+  foreign key (product_id) references inventories(product_id) on delete cascade
 }
 
 create table customers {
@@ -32,7 +32,7 @@ create table orders {
   customer_id int,
   total_amount numeric,
   primary key (order_id),
-  foreign key (customer_id) references customers(customer_id)
+  foreign key (customer_id) references customers(customer_id) on delete cascade
 }
 
 create table inventories {
