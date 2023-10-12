@@ -1,6 +1,6 @@
 update inventories
-set price = 3.00
-where product_id = '0001';
+set price = 300
+where product_id = '101';
 
 /* increase product price by 10% */
 update inventories
