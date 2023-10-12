@@ -1,2 +1,2 @@
 delete from customers
-where customer_id = '1001001';
+where customer_id = '1001';
